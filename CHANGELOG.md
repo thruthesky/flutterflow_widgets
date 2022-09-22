@@ -1,3 +1,8 @@
+## 0.0.2
+
+* Add `LinkifyLauncher`.
+
+
 ## 0.0.1
 
-* TODO: Describe initial release.
+* Initial release.
