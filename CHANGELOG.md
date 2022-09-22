@@ -1,3 +1,7 @@
+## 0.0.3
+
+* Change name from `LinkifyLauncher` to `LinkText`.
+
 ## 0.0.2
 
 * Add `LinkifyLauncher`.

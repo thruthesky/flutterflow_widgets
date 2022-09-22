@@ -1,1 +1,1 @@
-export 'src/linkify_launcher.dart';
+export 'src/link_text.dart';
