@@ -4,7 +4,15 @@
 
 - This package gives you enhanced and more handy widgets like `LinkifyLauncher` which is a combination of `linkify` and `launcher` widgets.
 
-## Getting started
 
-- Install and import, then use the package.
+## How to apply
 
+- import `flutterflow_widgets` package and supply `text` property to `LinkText`.
+
+```dart
+import 'package:flutterflow_widgets/flutterflow_widgets.dart';
+
+LinkText(
+    text: 'Address: https://philgo.com Address: https://naver.com',
+),
+```
