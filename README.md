@@ -38,6 +38,7 @@ class _LinkifyTextState extends State<LinkifyText> {
   Widget build(BuildContext context) {
     return LinkText(
       text: widget.text ?? '',
+      style: TextStyle(fontSize: 14),
     );
   }
 }

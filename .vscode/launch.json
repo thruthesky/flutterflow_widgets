@@ -10,6 +10,7 @@
       "program": "lib/main.dart",
       "request": "launch",
       "type": "dart",
+      "flutterMode": "debug",
       "deviceId": "43403D49-878E-4B1B-8C3B-1E633F798DD9"
     },
     {

@@ -42,6 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
             children: const <Widget>[
               LinkText(
                 text: 'Address: https://philgo.com Address: https://naver.com',
+                style: TextStyle(fontSize: 14),
               ),
             ],
           ),

@@ -1,3 +1,7 @@
+## 0.0.6
+
+* Add `TextStyle` on `LinkText`.
+
 ## 0.0.5
 
 * Set Dart SDK to `>=2.12.0 <3.0.0`.
