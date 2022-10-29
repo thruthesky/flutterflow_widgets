@@ -3,8 +3,13 @@ import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class LinkText extends StatelessWidget {
-  const LinkText({Key? key, required this.text}) : super(key: key);
+  const LinkText({
+    Key? key,
+    required this.text,
+    this.style,
+  }) : super(key: key);
   final String text;
+  final TextStyle? style;
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +22,7 @@ class LinkText extends StatelessWidget {
         }
       },
       text: text,
+      style: style,
     );
   }
 }

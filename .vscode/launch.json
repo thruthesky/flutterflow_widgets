@@ -5,12 +5,12 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Simulator",
+      "name": "J. Simulator",
       "cwd": "example",
       "program": "lib/main.dart",
       "request": "launch",
       "type": "dart",
-      "deviceId": "ECE40623-ACC2-4729-8DD4-B3DBB46D4B25"
+      "deviceId": "43403D49-878E-4B1B-8C3B-1E633F798DD9"
     },
     {
       "name": "Emulator - 5554",
