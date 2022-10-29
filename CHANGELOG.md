@@ -1,3 +1,8 @@
+## 0.0.7
+
+* Document update only
+
+
 ## 0.0.6
 
 * Add `TextStyle` on `LinkText`.
