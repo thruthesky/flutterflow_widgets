@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const <Widget>[
-              LinkText(
+              LinkifyText(
                 text: 'Address: https://philgo.com Address: https://naver.com',
                 style: TextStyle(fontSize: 14),
               ),

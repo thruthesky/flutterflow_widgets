@@ -1,6 +1,7 @@
 # FlutterFlow Widgets
 
-This package is developed especially for `FlutterFlow`, but you may use in flutter if you wish.
+- This package is developed for `FlutterFlow`. And you may use in flutter.
+- This package contains not only widgets but also some actions that are related with UI design like snackbar.
 
 
 # LinkText
@@ -15,8 +16,8 @@ This package is developed especially for `FlutterFlow`, but you may use in flutt
 ```dart
 import 'package:flutterflow_widgets/flutterflow_widgets.dart';
 
-class LinkifyText extends StatefulWidget {
-  const LinkifyText({
+class Linkify extends StatefulWidget {
+  const Linkify({
     Key? key,
     this.width,
     this.height,
@@ -28,16 +29,18 @@ class LinkifyText extends StatefulWidget {
   final String? text;
 
   @override
-  _LinkifyTextState createState() => _LinkifyTextState();
+  _LinkifyState createState() => _LinkifyState();
 }
 
-class _LinkifyTextState extends State<LinkifyText> {
+class _LinkifyState extends State<Linkify> {
   @override
   Widget build(BuildContext context) {
-    return LinkText(
+    return LinkifyText(
       text: widget.text ?? '',
       style: TextStyle(fontSize: 14),
     );
   }
 }
 ```
+
+
