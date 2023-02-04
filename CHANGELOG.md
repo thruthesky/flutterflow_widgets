@@ -1,3 +1,7 @@
+## 0.0.8
+
+* Copy some widgets from fireflow.
+
 ## 0.0.7
 
 * Document update only
