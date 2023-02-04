@@ -3,14 +3,12 @@
 This package is developed especially for `FlutterFlow`, but you may use in flutter if you wish.
 
 
-## Widgets
-
-### LinkText
+# LinkText
 
 - This is a simple and handy widget to use display linkified and launchable text. When a user taps, it will open the url in the text. This is a simple combination of `linkify` and `launcher` widgets.
 
 
-#### How to apply
+## How to use LinkText
 
 - import `flutterflow_widgets` package and supply `text` property to `LinkText`.
 
