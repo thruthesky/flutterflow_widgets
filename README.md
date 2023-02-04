@@ -4,14 +4,14 @@
 - This package contains not only widgets but also some actions that are related with UI design like snackbar.
 
 
-# LinkText
+# LinkifyText
 
 - This is a simple and handy widget to use display linkified and launchable text. When a user taps, it will open the url in the text. This is a simple combination of `linkify` and `launcher` widgets.
 
 
-## How to use LinkText
+## How to use LinkifyText
 
-- import `flutterflow_widgets` package and supply `text` property to `LinkText`.
+- import `flutterflow_widgets` package and supply `text` property to `LinkifyText`.
 
 ```dart
 import 'package:flutterflow_widgets/flutterflow_widgets.dart';
