@@ -1,6 +1,6 @@
 name: flutterflow_widgets
 description: Widget library for FlutterFlow.
-version: 0.0.9
+version: 0.0.10
 homepage: https://github.com/thruthesky/flutterflow_widgets
 
 environment:
