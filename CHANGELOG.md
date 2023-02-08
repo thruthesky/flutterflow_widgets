@@ -1,3 +1,7 @@
+## 0.0.14
+
+* Fix. update document.
+
 ## 0.0.13
 
 * Fix. revert the video player to cheiw.

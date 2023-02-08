@@ -4,6 +4,22 @@
 - This package contains not only widgets but also some actions that are related with UI design like snackbar.
 
 
+- [FlutterFlow Widgets](#flutterflow-widgets)
+- [LinkifyText](#linkifytext)
+  - [How to use LinkifyText](#how-to-use-linkifytext)
+- [Custom Popup widget.](#custom-popup-widget)
+  - [Custom Popup Tips](#custom-popup-tips)
+  - [How to implement the custom ppup](#how-to-implement-the-custom-ppup)
+  - [Custom popup step by step example](#custom-popup-step-by-step-example)
+    - [Create a child Component](#create-a-child-component)
+    - [Create a popup Component](#create-a-popup-component)
+    - [Custom widget for Custom Popup](#custom-widget-for-custom-popup)
+    - [Add the custom widget in your design](#add-the-custom-widget-in-your-design)
+- [CustomIconPopup](#customiconpopup)
+- [DisplayMedia widget](#displaymedia-widget)
+- [SafeArea widget](#safearea-widget)
+
+
 # LinkifyText
 
 - This is a simple and handy widget to use display linkified and launchable text. When a user taps, it will open the url in the text. This is a simple combination of `linkify` and `launcher` widgets.
@@ -369,3 +385,41 @@ Be sure that you disable the `Enforce Width and Height` option.
 
 ![Image Link](https://github.com/withcenter/fireflow/blob/main/etc/readme/img/safearea-6.jpg?raw=true "SafeArea")
 
+
+
+# Snackbar
+
+The `snackbar` is an action that it does appear on the screen by an action. You can show a snackbar on `On Page Load` event, or when a user presses a button.
+
+You need to create a custom action like below and call the action.
+
+You can name the action by yourself.
+
+**Action Settings**
+- Include BuildContext
+- No return value
+
+**Define Arguments**
+| Parameter Name | Type | List | Nullable |
+|----------------|------|------|------|
+| title | String | | |
+| message | String | | |
+
+
+
+```dart
+import 'package:flutterflow_widgets/flutterflow_widgets.dart';
+
+Future successSnackbar(
+  BuildContext context,
+  String title,
+  String message,
+) async {
+  // Add your function code here!
+  snackBarSuccess(
+    context: context,
+    title: title,
+    message: message,
+  );
+}
+```
