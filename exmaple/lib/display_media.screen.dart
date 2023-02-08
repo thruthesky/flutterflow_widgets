@@ -20,7 +20,11 @@ class _DisplayMediaScreenState extends State<DisplayMediaScreen> {
           Center(
             child: Text('Display Media'),
           ),
-          DisplayMedia(url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4', width: 200, height: 200),
+          DisplayMedia(
+              url:
+                  'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+              width: 200,
+              height: 200),
         ],
       ),
     );

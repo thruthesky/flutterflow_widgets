@@ -28,7 +28,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 style: TextStyle(fontSize: 14),
               ),
               ElevatedButton(
-                onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: ((context) => DisplayMediaScreen()))),
+                onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: ((context) => DisplayMediaScreen()))),
                 child: Text('Display Media'),
               ),
             ],

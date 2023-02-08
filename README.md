@@ -18,6 +18,7 @@
 - [CustomIconPopup](#customiconpopup)
 - [DisplayMedia widget](#displaymedia-widget)
 - [SafeArea widget](#safearea-widget)
+- [Snackbar](#snackbar)
 
 
 # LinkifyText
