@@ -396,6 +396,9 @@ You need to create a custom action like below and call the action.
 
 You can name the action by yourself.
 
+
+## success snackbar
+
 **Action Settings**
 - Include BuildContext
 - No return value
@@ -405,7 +408,6 @@ You can name the action by yourself.
 |----------------|------|------|------|
 | title | String | | |
 | message | String | | |
-
 
 
 ```dart
@@ -418,6 +420,37 @@ Future successSnackbar(
 ) async {
   // Add your function code here!
   snackBarSuccess(
+    context: context,
+    title: title,
+    message: message,
+  );
+}
+```
+
+
+## error snackbar
+
+**Action Settings**
+- Include BuildContext
+- No return value
+
+**Define Arguments**
+| Parameter Name | Type | List | Nullable |
+|----------------|------|------|------|
+| title | String | | |
+| message | String | | |
+
+
+```dart
+import 'package:flutterflow_widgets/flutterflow_widgets.dart';
+
+Future errorSnackbar(
+  BuildContext context,
+  String title,
+  String message,
+) async {
+  // Add your function code here!
+  snackBarWarning(
     context: context,
     title: title,
     message: message,
