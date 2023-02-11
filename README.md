@@ -406,8 +406,8 @@ You can name the action by yourself.
 **Define Arguments**
 | Parameter Name | Type | List | Nullable |
 |----------------|------|------|----------|
-| title          | String |    |          |
-| message | String | | |
+| title          | String | No | No |
+| message | String | No | No |
 
 
 ```dart
@@ -438,8 +438,8 @@ Future successSnackbar(
 **Define Arguments**
 | Parameter Name | Type | List | Nullable |
 |----------------|------|------|----------|
-| title | String | | |
-| message | String | | |
+| title | String | No | No |
+| message | String | No | No |
 
 
 ```dart
