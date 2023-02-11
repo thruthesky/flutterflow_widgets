@@ -405,8 +405,8 @@ You can name the action by yourself.
 
 **Define Arguments**
 | Parameter Name | Type | List | Nullable |
-|----------------|------|------|------|
-| title | String | | |
+|----------------|------|------|----------|
+| title          | String |    |          |
 | message | String | | |
 
 
@@ -428,6 +428,7 @@ Future successSnackbar(
 ```
 
 
+
 ## error snackbar
 
 **Action Settings**
@@ -436,7 +437,7 @@ Future successSnackbar(
 
 **Define Arguments**
 | Parameter Name | Type | List | Nullable |
-|----------------|------|------|------|
+|----------------|------|------|----------|
 | title | String | | |
 | message | String | | |
 
@@ -456,4 +457,50 @@ Future errorSnackbar(
     message: message,
   );
 }
+```
+
+
+## Using go_router context to let the snackbar work after page change
+
+When a snackbar is open and the user moves to antoher page, then the context of the snackbar would be invalid. And when user press the close icon, the snackbar will not be closed immediately.
+
+You can give the context of go_router in this case if you are using the Routing in FF app details settings.
+
+```dart
+import 'package:flutterflow_widgets/flutterflow_widgets.dart';
+import 'package:go_router/go_router.dart';
+
+Future successSnackbar(
+  BuildContext context,
+  String title,
+  String message,
+) async {
+  // Add your function code here!
+  snackBarSuccess(
+    context: GoRouter.of(context).routerDelegate.navigatorKey.currentContext!,
+    title: title,
+    message: message,
+  );
+}
+```
+
+
+## Customizing the snackbar
+
+You can use `showSnackbar` method. The `snackBarSuccess` and `snackBarWarning` are merely a wrapper of `showSnackbar` with different properties.
+
+```dart
+showSnackBar(
+  GoRouter.of(context).routerDelegate.navigatorKey.currentContext!,
+  snackBarContent(
+    context: GoRouter.of(context).routerDelegate.navigatorKey.currentContext!,
+    title: title,
+    message: message,
+    backgroundColor: Colors.black.withAlpha(190),
+    closeButtonColor: Colors.white,
+    icon: const Icon(Icons.check_circle, color: Colors.green, size: 28),
+    arrowBackgroundColor: Colors.white,
+    seconds: 20,
+  ),
+);
 ```
