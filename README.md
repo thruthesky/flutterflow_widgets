@@ -274,6 +274,14 @@ For the example of the code above, the Custom widget is ChatRoomMenu. And I adde
 
 - You can use `Icon` instead of adding a child component.
 
+
+- Below are two example of how you can create a widget that uses `CustomIconPopup`.
+
+![Image Link](https://github.com/withcenter/fireflow/blob/main/etc/readme/img/custom-icon-popup-1.jpg?raw=true "Custom Popup")
+
+![Image Link](https://github.com/withcenter/fireflow/blob/main/etc/readme/img/custom-icon-popup-2.jpg?raw=true "Custom Popup")
+
+
 ```dart
 CustomIconPopup(
   popup: Container(
