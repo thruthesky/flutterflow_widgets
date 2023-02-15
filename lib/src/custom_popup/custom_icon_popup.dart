@@ -7,12 +7,12 @@ class CustomIconPopup extends StatelessWidget {
     Key? key,
     required this.icon,
     required this.popup,
-    this.iconPadding = 8,
+    this.iconPadding = 0,
     this.dx = 0,
     this.dy = 16,
   }) : super(key: key);
 
-  final Icon icon;
+  final Widget icon;
   final Widget popup;
   final double iconPadding;
   final double dx;
