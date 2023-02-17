@@ -1,3 +1,7 @@
+## 0.0.27
+
+* Update. add url preview action.
+
 ## 0.0.26
 
 * Fix. dependency.
