@@ -40,7 +40,9 @@ class _UrlPreviewState extends State<UrlPreview> {
     return FutureBuilder(
       future: get(Uri.parse(firstLink!)),
       builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting || snapshot.hasError || snapshot.hasData == false) {
+        if (snapshot.connectionState == ConnectionState.waiting ||
+            snapshot.hasError ||
+            snapshot.hasData == false) {
           return const SizedBox.shrink();
         }
 
@@ -51,7 +53,8 @@ class _UrlPreviewState extends State<UrlPreview> {
         }
 
         final meta = UrlPreviewModel.fromBody(response.body);
-        final child = Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        final child =
+            Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           if (meta.image != null) Image.network(meta.image!),
           if (meta.title != null) ...[
             const SizedBox(height: 8),
