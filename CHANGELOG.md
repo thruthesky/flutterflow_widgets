@@ -1,3 +1,7 @@
+## 0.0.28
+
+* Update. add `hasData` on UrlPreview model.
+
 ## 0.0.27
 
 * Update. add url preview action.

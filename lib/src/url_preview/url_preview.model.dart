@@ -38,6 +38,17 @@ class UrlPreviewModel {
     }
   }
 
+  bool get hasData {
+    if (firstLink == null ||
+        firstLink!.isEmpty ||
+        html == null ||
+        html!.isEmpty) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
   parseHtml(String body) {
     final Document doc = parse(body);
 
