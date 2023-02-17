@@ -14,6 +14,7 @@ class LinkifyText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Linkify(
+      options: const LinkifyOptions(humanize: false),
       onOpen: (link) async {
         if (await canLaunchUrlString(link.url)) {
           await launchUrlString(link.url);

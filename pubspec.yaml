@@ -1,6 +1,6 @@
 name: flutterflow_widgets
 description: Widget library for FlutterFlow.
-version: 0.0.19
+version: 0.0.20
 homepage: https://github.com/thruthesky/flutterflow_widgets
 
 environment:
@@ -11,7 +11,13 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # Add links to text
   flutter_linkify: ^5.0.2
+
+  # Get links from text
+  linkify: ^4.1.0
+
+  # Open links
   url_launcher: ^6.1.5
 
   cached_network_image: 3.2.1
@@ -26,6 +32,10 @@ dependencies:
   video_player_web: 2.0.12
 
   path: 1.8.2
+
+  # url preview
+  http: ^0.13.5
+  html: ^0.15.1
 
 dev_dependencies:
   flutter_test:

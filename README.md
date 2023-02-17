@@ -29,6 +29,8 @@
 ## How to use LinkifyText
 
 - import `flutterflow_widgets` package and supply `text` property to `LinkifyText`.
+- It will open the link when the user taps on the link.
+- Don't forget to uncheck `Enforce Width and Height`.
 
 ```dart
 import 'package:flutterflow_widgets/flutterflow_widgets.dart';
@@ -59,6 +61,22 @@ class _LinkifyState extends State<Linkify> {
   }
 }
 ```
+
+# UrlPreview
+
+
+- When there is an URL in a text, then it will show a preview.
+
+```dart
+import 'package:flutterflow_widgets/flutterflow_widgets.dart';
+UrlPreview(text: "FlutterFlow website: https://flutterflow.com", padding: 8, descriptionLength: 80)
+```
+
+- For more details, see the example at example/lib/url_preview.screen.dart
+
+
+
+
 
 
 

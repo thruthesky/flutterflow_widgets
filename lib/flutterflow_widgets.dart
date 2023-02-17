@@ -6,3 +6,5 @@ export 'src/safe_area/safe_area_top.dart';
 export 'src/safe_area/safe_area_bottom.dart';
 export 'src/show_modal_top_sheet/show_modal_top_sheet.dart';
 export 'src/snackbar/snackbar.dart';
+export 'src/url_preview/url_preview.dart';
+export 'src/url_preview/url_preview.model.dart';

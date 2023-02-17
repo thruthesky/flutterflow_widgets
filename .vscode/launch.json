@@ -5,14 +5,24 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "J. Simulator",
+      "name": "Simulator - M1 Mac Book - 16",
       "cwd": "example",
       "program": "lib/main.dart",
       "request": "launch",
       "type": "dart",
       "flutterMode": "debug",
-      "deviceId": "43403D49-878E-4B1B-8C3B-1E633F798DD9"
+      "deviceId": "8E7C4276-1F64-453C-AE32-422C59170B93"
     },
+    {
+      "name": "iPhone11MaxPro - iPhone - JaeHo",
+      "cwd": "example",
+      "program": "lib/main.dart",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "debug",
+      "deviceId": "00008030-000904C80290802E"
+    },
+
     {
       "name": "Emulator - 5554",
       "cwd": "example",

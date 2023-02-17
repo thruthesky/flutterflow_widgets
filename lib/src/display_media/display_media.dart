@@ -222,10 +222,10 @@ class DisplayMedia extends StatefulWidget {
   final String url;
 
   @override
-  _UploadedMediaState createState() => _UploadedMediaState();
+  UploadedMediaState createState() => UploadedMediaState();
 }
 
-class _UploadedMediaState extends State<DisplayMedia> {
+class UploadedMediaState extends State<DisplayMedia> {
   @override
   Widget build(BuildContext context) {
     return Container(
