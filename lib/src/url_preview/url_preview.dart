@@ -60,7 +60,7 @@ class _UrlPreviewState extends State<UrlPreview> {
             const SizedBox(height: 8),
             Text(
               meta.title!,
-              style: const TextStyle(fontWeight: FontWeight.bold),
+              style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
             ),
           ],
           if (meta.description != null) ...[
@@ -69,6 +69,7 @@ class _UrlPreviewState extends State<UrlPreview> {
               meta.description!.length > (widget.descriptionLength ?? 100)
                   ? '${meta.description!.substring(0, widget.descriptionLength ?? 100)}...'
                   : meta.description!,
+              style: TextStyle(fontSize: 13, color: Colors.grey.shade800),
             ),
           ],
         ]);

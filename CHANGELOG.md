@@ -1,3 +1,7 @@
+## 0.0.23
+
+* Update. UrlPreview design.
+
 ## 0.0.22
 
 * Update. url preview. add builder for better ui work.
