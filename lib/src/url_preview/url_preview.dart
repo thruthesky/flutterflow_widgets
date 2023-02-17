@@ -43,17 +43,13 @@ class _UrlPreviewState extends State<UrlPreview> {
     return FutureBuilder(
       future: getUrlContent(),
       builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting ||
-            snapshot.hasError ||
-            snapshot.hasData == false ||
-            snapshot.data.toString().isEmpty) {
+        if (snapshot.connectionState == ConnectionState.waiting || snapshot.hasError || snapshot.hasData == false || snapshot.data.toString().isEmpty) {
           return const SizedBox.shrink();
         }
 
         final meta = UrlPreviewModel.fromBody(snapshot.data.toString());
 
-        final child =
-            Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        final child = Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           if (meta.image != null) CachedNetworkImage(imageUrl: meta.image!),
           if (meta.title != null) ...[
             const SizedBox(height: 8),
