@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutterflow_widgets/flutterflow_widgets.dart';
 import 'package:http/http.dart';
 import 'package:linkify/linkify.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher_string.dart';
+import 'package:crypto/crypto.dart';
 
 /// [UrlPreview] is a widget that shows a preview of a URL.
 ///
@@ -38,21 +40,17 @@ class _UrlPreviewState extends State<UrlPreview> {
     }
 
     return FutureBuilder(
-      future: get(Uri.parse(firstLink!)),
+      future: getUrlContent(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting ||
             snapshot.hasError ||
-            snapshot.hasData == false) {
+            snapshot.hasData == false ||
+            snapshot.data.toString().isEmpty) {
           return const SizedBox.shrink();
         }
 
-        final response = snapshot.data as Response;
-        final contentType = response.headers['content-type'];
-        if (contentType == null || !contentType.contains('text/html')) {
-          return const SizedBox.shrink();
-        }
+        final meta = UrlPreviewModel.fromBody(snapshot.data.toString());
 
-        final meta = UrlPreviewModel.fromBody(response.body);
         final child =
             Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           if (meta.image != null) Image.network(meta.image!),
@@ -102,5 +100,28 @@ class _UrlPreviewState extends State<UrlPreview> {
       }
     }
     return null;
+  }
+
+  Future<String> getUrlContent() async {
+    final md5Key = md5.convert(firstLink!.codeUnits).toString();
+
+    // Obtain shared preferences.
+    final prefs = await SharedPreferences.getInstance();
+    String? html = prefs.getString(md5Key);
+    if (html != null) {
+      return html;
+    }
+
+    final response = await get(Uri.parse(firstLink!));
+
+    final contentType = response.headers['content-type'];
+    if (contentType == null || !contentType.contains('text/html')) {
+      return Future.value('');
+    }
+
+    html = response.body;
+    // Save an String value to 'action' key.
+    await prefs.setString(md5Key, html);
+    return Future.value(html);
   }
 }
