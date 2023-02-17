@@ -29,13 +29,13 @@ class UrlPreview extends StatefulWidget {
   const UrlPreview({
     Key? key,
     this.text,
-    this.padding = 0,
-    this.descriptionLength = 100,
+    this.padding,
+    this.descriptionLength,
   }) : super(key: key);
 
   final String? text;
-  final int descriptionLength;
-  final double padding;
+  final int? descriptionLength;
+  final double? padding;
 
   @override
   createState() => _UrlPreviewState();
@@ -73,7 +73,7 @@ class _UrlPreviewState extends State<UrlPreview> {
             }
           },
           child: Padding(
-            padding: EdgeInsets.all(widget.padding),
+            padding: EdgeInsets.all(widget.padding ?? 0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -88,8 +88,8 @@ class _UrlPreviewState extends State<UrlPreview> {
                 if (meta.description != null) ...[
                   const SizedBox(height: 8),
                   Text(
-                    meta.description!.length > widget.descriptionLength
-                        ? '${meta.description!.substring(0, widget.descriptionLength)}...'
+                    meta.description!.length > (widget.descriptionLength ?? 100)
+                        ? '${meta.description!.substring(0, widget.descriptionLength ?? 100)}...'
                         : meta.description!,
                   ),
                 ],
