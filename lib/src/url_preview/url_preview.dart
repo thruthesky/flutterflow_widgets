@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterflow_widgets/flutterflow_widgets.dart';
 import 'package:http/http.dart';
@@ -53,7 +54,7 @@ class _UrlPreviewState extends State<UrlPreview> {
 
         final child =
             Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          if (meta.image != null) Image.network(meta.image!),
+          if (meta.image != null) CachedNetworkImage(imageUrl: meta.image!),
           if (meta.title != null) ...[
             const SizedBox(height: 8),
             Text(

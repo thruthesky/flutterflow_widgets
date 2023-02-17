@@ -1,3 +1,8 @@
+## 0.0.25
+
+* Update. Cache image in UrlPreview.
+
+
 ## 0.0.24
 
 * Update. Better parsing and improvment on loading speed in UrlPreview.
