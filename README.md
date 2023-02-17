@@ -69,7 +69,21 @@ class _LinkifyState extends State<Linkify> {
 
 ```dart
 import 'package:flutterflow_widgets/flutterflow_widgets.dart';
-UrlPreview(text: "FlutterFlow website: https://flutterflow.com", padding: 8, descriptionLength: 80)
+UrlPreview(
+  text: 'Stack overflow: https://stackoverflow.com/questions/62540297/figma-text-orientation?a=b&text-orien, This is naver https://naver.com.',
+  descriptionLength: 80,
+  builder: (child) => Container(
+    margin: const EdgeInsets.only(top: 8),
+    padding: const EdgeInsets.all(8),
+    width: 240,
+    decoration: BoxDecoration(
+      color: Colors.amber.shade100,
+      border: Border.all(color: Colors.black),
+      borderRadius: BorderRadius.circular(8),
+    ),
+    child: child,
+  ),
+),
 ```
 
 - For more details, see the example at example/lib/url_preview.screen.dart
