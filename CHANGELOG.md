@@ -1,3 +1,7 @@
+## 0.0.26
+
+* Fix. dependency.
+
 ## 0.0.25
 
 * Update. Cache image in UrlPreview.
