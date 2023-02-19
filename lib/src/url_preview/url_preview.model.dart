@@ -32,6 +32,9 @@ class UrlPreviewModel {
   Future load(String? text) async {
     this.text = text;
     firstLink = getFirstLink();
+    if (firstLink == null || firstLink!.isEmpty) {
+      return;
+    }
     html = await getUrlContent();
     if (html != null) {
       parseHtml(html!);

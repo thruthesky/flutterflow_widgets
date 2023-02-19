@@ -1,3 +1,7 @@
+## 0.0.29
+
+* Fix. UrlPreview model.
+
 ## 0.0.28
 
 * Update. add `hasData` on UrlPreview model.
