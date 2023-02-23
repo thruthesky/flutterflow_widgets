@@ -17,9 +17,9 @@ class CustomCalendar extends StatefulWidget {
   }) : super(key: key);
 
   final String locale;
-  final Map<DateTime, List<String>> events;
+  final Map<DateTime, dynamic> events;
 
-  final Function(List<String>?) onDaySelected;
+  final Function(List<dynamic>?) onDaySelected;
   @override
   createState() => _CustomCalendarState();
 }
@@ -31,15 +31,26 @@ class _CustomCalendarState extends State<CustomCalendar> {
 
   CalendarFormat _calendarFormat = CalendarFormat.month;
 
-  late final LinkedHashMap kEvents;
+  LinkedHashMap? calendarEvents;
 
-  @override
-  void initState() {
-    super.initState();
-    kEvents = LinkedHashMap<DateTime, List<String>>(
+  loadEvents(DateTime day) {
+    /// collect by dates
+    final Map<DateTime, List<dynamic>> byDates = {};
+    for (final date in widget.events.keys) {
+      final key = DateTime(date.year, date.month, date.day);
+      if (byDates[key] == null) {
+        byDates[key] = [];
+      }
+      byDates[key]!.add(widget.events[date]);
+    }
+
+    /// convert to LinkedHashMap
+    calendarEvents = LinkedHashMap<DateTime, List<dynamic>>(
       equals: isSameDay,
       hashCode: getHashCode,
-    )..addAll(widget.events);
+    )..addAll(byDates);
+
+    return calendarEvents?[day] ?? [];
   }
 
   /// 날짜 hashcode
@@ -62,7 +73,7 @@ class _CustomCalendarState extends State<CustomCalendar> {
           _selectedDay = selectedDay;
           _focusedDay = focusedDay;
         });
-        widget.onDaySelected(kEvents[selectedDay]);
+        widget.onDaySelected(calendarEvents?[selectedDay]);
       },
       calendarFormat: _calendarFormat,
       onFormatChanged: (format) {
@@ -73,7 +84,7 @@ class _CustomCalendarState extends State<CustomCalendar> {
       onPageChanged: (focusedDay) {
         _focusedDay = focusedDay;
       },
-      eventLoader: (dt) => kEvents[dt] ?? [],
+      eventLoader: (dt) => loadEvents(dt),
       calendarStyle: const CalendarStyle(
         markersAlignment: Alignment(.6, .9),
       ),

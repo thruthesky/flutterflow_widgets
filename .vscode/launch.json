@@ -30,6 +30,16 @@
       "request": "launch",
       "type": "dart",
       "deviceId": "emulator-5554"
+    },
+
+    {
+      "name": "Calendar - Simulator - M1 Mac Book - 16",
+      "cwd": "apps/testcalendar",
+      "program": "lib/main.dart",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "debug",
+      "deviceId": "8E7C4276-1F64-453C-AE32-422C59170B93"
     }
   ]
 }

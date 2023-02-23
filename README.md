@@ -546,3 +546,77 @@ showSnackBar(
   ),
 );
 ```
+
+
+
+# CustomCalendar
+
+
+![Image Link](https://github.com/withcenter/fireflow/blob/main/etc/readme/img/ffw-calendar.jpg?raw=true "CustomCalendar")
+
+
+You can display the number of events on the dates of the calendar.
+
+
+
+* Example of custom widget to display the number of events from firestore in realtime.
+
+```dart
+import 'package:flutterflow_widgets/flutterflow_widgets.dart';
+
+class MyCalendar extends StatefulWidget {
+  const MyCalendar({
+    Key? key,
+    this.width,
+    this.height,
+    required this.collectionName,
+  }) : super(key: key);
+
+  final double? width;
+  final double? height;
+  final String collectionName;
+
+  @override
+  _MyCalendarState createState() => _MyCalendarState();
+}
+
+class _MyCalendarState extends State<MyCalendar> {
+  final Map<DateTime, dynamic> events = {};
+
+  @override
+  void initState() {
+    super.initState();
+    init();
+  }
+
+  init() async {
+    // / Get documents from collection
+    FirebaseFirestore.instance
+        .collection(widget.collectionName)
+        .snapshots()
+        .listen((QuerySnapshot querySnapshot) {
+      if (querySnapshot.size == 0 || querySnapshot.docs.isEmpty) {
+        return;
+      }
+      events.clear();
+      for (final doc in querySnapshot.docs) {
+        if (doc['date'] == null) continue;
+        final data = doc.data() as Map<String, dynamic>;
+        data['reference'] = doc.reference;
+        events[doc['date'].toDate()] = data;
+      }
+      setState(() {});
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return CustomCalendar(
+      events: events,
+      onDaySelected: (events) {
+        print('events; $events');
+      },
+    );
+  }
+}
+```
