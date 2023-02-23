@@ -630,7 +630,7 @@ class _MyCalendarState extends State<MyCalendar> {
 
 Instead of passing the collection name into the method and do the firebase things inside, you can do the Firestore backend query and pass the list of the document you have.
 
-![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/ffw-calendar-3.jpg?raw=true "CustomCalendar")
+![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/ffw-calendar-5.jpg?raw=true "CustomCalendar")
 
 ```dart
 import 'package:flutterflow_widgets/flutterflow_widgets.dart';
