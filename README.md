@@ -65,6 +65,10 @@ class _LinkifyState extends State<Linkify> {
 # UrlPreview
 
 
+
+![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/ffw-link-preview.jpg?raw=true "CustomCalendar")
+
+
 - When there is an URL in a text, then it will show a preview.
 
 ```dart
