@@ -1,3 +1,7 @@
+## 0.0.32
+
+* Update. document.
+
 ## 0.0.31
 
 * Update. Calendar with events.
