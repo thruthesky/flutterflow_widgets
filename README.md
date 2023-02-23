@@ -657,14 +657,7 @@ class _MyCalendarState extends State<MyCalendar> {
   final Map<DateTime, dynamic> events = {};
 
   @override
-  void initState() {
-    super.initState();
-    init();
-  }
-
-  init() async {
-    // / Get documents from collection
-
+  Widget build(BuildContext context) {
     events.clear();
     for (final DatesRecord doc in widget.documents ?? []) {
       if (doc.date == null) continue;
@@ -674,11 +667,6 @@ class _MyCalendarState extends State<MyCalendar> {
         'title': doc.title,
       };
     }
-    setState(() {});
-  }
-
-  @override
-  Widget build(BuildContext context) {
     return CustomCalendar(
       events: events,
       onDaySelected: (events) {
