@@ -626,3 +626,67 @@ class _MyCalendarState extends State<MyCalendar> {
   }
 }
 ```
+
+
+Instead of passing the collection name into the method and do the firebase things inside, you can do the Firestore backend query and pass the list of the document you have.
+
+![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/ffw-calendar-3.jpg?raw=true "CustomCalendar")
+
+```dart
+import 'package:flutterflow_widgets/flutterflow_widgets.dart';
+
+class MyCalendar extends StatefulWidget {
+  const MyCalendar({
+    Key? key,
+    this.width,
+    this.height,
+    required this.documents,
+    required this.onTap,
+  }) : super(key: key);
+
+  final double? width;
+  final double? height;
+  final List<DatesRecord>? documents;
+  final Future<dynamic> Function() onTap;
+
+  @override
+  _MyCalendarState createState() => _MyCalendarState();
+}
+
+class _MyCalendarState extends State<MyCalendar> {
+  final Map<DateTime, dynamic> events = {};
+
+  @override
+  void initState() {
+    super.initState();
+    init();
+  }
+
+  init() async {
+    // / Get documents from collection
+
+    events.clear();
+    for (final DatesRecord doc in widget.documents ?? []) {
+      if (doc.date == null) continue;
+      events[doc.date!] = {
+        'reference': doc.reference,
+        'date': doc.date,
+        'title': doc.title,
+      };
+    }
+    setState(() {});
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return CustomCalendar(
+      events: events,
+      onDaySelected: (events) {
+        print('events; $events');
+        FFAppState().events = events ?? [];
+        widget.onTap();
+      },
+    );
+  }
+}
+```
