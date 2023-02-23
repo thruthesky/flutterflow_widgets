@@ -682,3 +682,45 @@ class _MyCalendarState extends State<MyCalendar> {
   }
 }
 ```
+
+
+The code below is even more short.
+
+```dart
+import 'package:flutterflow_widgets/flutterflow_widgets.dart';
+
+class MyCalendar extends StatefulWidget {
+  const MyCalendar({
+    Key? key,
+    this.width,
+    this.height,
+    required this.documents,
+    required this.onTap,
+  }) : super(key: key);
+
+  final double? width;
+  final double? height;
+  final List<DatesRecord>? documents;
+  final Future<dynamic> Function() onTap;
+
+  @override
+  _MyCalendarState createState() => _MyCalendarState();
+}
+
+class _MyCalendarState extends State<MyCalendar> {
+  @override
+  Widget build(BuildContext context) {
+    return CustomCalendar(
+      events: Map.fromEntries(widget.documents!.map((e) => MapEntry(e.date!, {
+            'reference': e.reference,
+            'date': e.date,
+            'title': e.title,
+          }))),
+      onDaySelected: (events) {
+        FFAppState().events = events ?? [];
+        widget.onTap();
+      },
+    );
+  }
+}
+```
