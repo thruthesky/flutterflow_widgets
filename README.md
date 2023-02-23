@@ -552,16 +552,21 @@ showSnackBar(
 # CustomCalendar
 
 
-![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/ffw-calendar.jpg?raw=true "CustomCalendar")
+![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/ffw-calendar-2.jpg?raw=true "CustomCalendar")
+![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/ffw-calendar-3.jpg?raw=true "CustomCalendar")
 
 
 You can display the number of events on the dates of the calendar.
 
+- Set a variable on AppState.
+- Add a `onTap` action into your custom widget.
+- When the user taps on a date, save the events into the app state and re-render the screen.
 
 
 * Example of custom widget to display the number of events from firestore in realtime.
 
 ```dart
+
 import 'package:flutterflow_widgets/flutterflow_widgets.dart';
 
 class MyCalendar extends StatefulWidget {
@@ -570,11 +575,13 @@ class MyCalendar extends StatefulWidget {
     this.width,
     this.height,
     required this.collectionName,
+    required this.onTap,
   }) : super(key: key);
 
   final double? width;
   final double? height;
   final String collectionName;
+  final Future<dynamic> Function() onTap;
 
   @override
   _MyCalendarState createState() => _MyCalendarState();
@@ -591,10 +598,7 @@ class _MyCalendarState extends State<MyCalendar> {
 
   init() async {
     // / Get documents from collection
-    FirebaseFirestore.instance
-        .collection(widget.collectionName)
-        .snapshots()
-        .listen((QuerySnapshot querySnapshot) {
+    FirebaseFirestore.instance.collection(widget.collectionName).snapshots().listen((QuerySnapshot querySnapshot) {
       if (querySnapshot.size == 0 || querySnapshot.docs.isEmpty) {
         return;
       }
@@ -615,6 +619,8 @@ class _MyCalendarState extends State<MyCalendar> {
       events: events,
       onDaySelected: (events) {
         print('events; $events');
+        FFAppState().events = events ?? [];
+        widget.onTap();
       },
     );
   }
