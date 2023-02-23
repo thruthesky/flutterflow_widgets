@@ -1,6 +1,6 @@
 name: flutterflow_widgets
 description: Widget library for FlutterFlow.
-version: 0.0.29
+version: 0.0.30
 homepage: https://github.com/thruthesky/flutterflow_widgets
 
 environment:
@@ -11,6 +11,8 @@ dependencies:
   flutter:
     sdk: flutter
 
+  flutter_localizations:
+    sdk: flutter
   # Add links to text
   flutter_linkify: ^5.0.2
 
@@ -42,6 +44,10 @@ dependencies:
 
   # local storage for url preview
   shared_preferences: ^2.0.15
+
+  # for CustomCalendar with the same version of FF
+  table_calendar: 3.0.6
+  intl: 0.17.0
 
 dev_dependencies:
   flutter_test:
