@@ -26,6 +26,8 @@
 - This is a simple and handy widget to use display linkified and launchable text. When a user taps, it will open the url in the text. This is a simple combination of `linkify` and `launcher` widgets.
 
 
+![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/url-preview-and-linkify-text.jpg?raw=true "CustomCalendar")
+
 ## How to use LinkifyText
 
 - import `flutterflow_widgets` package and supply `text` property to `LinkifyText`.
@@ -553,18 +555,22 @@ showSnackBar(
 
 
 
+
 # CustomCalendar
+
+
+You can display the number of events on the dates of the calendar.
+
+- Set a variable named `events` with the type of `List < JSON >` on AppState.
+- Add a `onTap` action into your custom widget.
+- When the user taps on a date, save the events into the app state and re-render the screen.
+- The documet must have `date` field.
+
 
 
 ![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/ffw-calendar-2.jpg?raw=true "CustomCalendar")
 ![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/ffw-calendar-3.jpg?raw=true "CustomCalendar")
 
-
-You can display the number of events on the dates of the calendar.
-
-- Set a variable on AppState.
-- Add a `onTap` action into your custom widget.
-- When the user taps on a date, save the events into the app state and re-render the screen.
 
 
 * Example of custom widget to display the number of events from firestore in realtime.
