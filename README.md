@@ -439,8 +439,6 @@ Be sure that you disable the `Enforce Width and Height` option.
 
 # Snackbar
 
-
-
 ![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/snackbar.gif?raw=true "Snackbar")
 
 
