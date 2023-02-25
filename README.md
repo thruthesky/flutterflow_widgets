@@ -439,6 +439,11 @@ Be sure that you disable the `Enforce Width and Height` option.
 
 # Snackbar
 
+
+
+![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/snackbar.gif?raw=true "Snackbar")
+
+
 The `snackbar` is an action that it does appear on the screen by an action. You can show a snackbar on `On Page Load` event, or when a user presses a button.
 
 You need to create a custom action like below and call the action.
