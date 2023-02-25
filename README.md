@@ -26,7 +26,7 @@
 - This is a simple and handy widget to use display linkified and launchable text. When a user taps, it will open the url in the text. This is a simple combination of `linkify` and `launcher` widgets.
 
 
-![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/url-preview-and-linkify-text-2.jpg?raw=true "CustomCalendar")
+![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/url-preview-and-linkify-text-2.jpg?raw=true "LinkifyText and UrlPreview")
 
 ## How to use LinkifyText
 
@@ -108,8 +108,9 @@ So, I made a widget named `CustomPopup` that does something like the popup menu 
 
 In the screenshot, I display the members of the chat room. Yes, it is a real popup menu and all the designs are coming from Components. You can add custom design and actions as you want.
 
-Ex) Chat room screenshot
-![Image Link](https://github.com/withcenter/fireflow/blob/main/etc/readme/img/custom-popup.gif?raw=true "Custom Popup")
+
+![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/custom-popup.gif?raw=true "Custom Popup")
+
 
 It would be good to use when there are multiple popup menus in one screen. Like one in left side of appbar, and another in right side of app bar, and one more on user profile photo of each posts and comments.
 
