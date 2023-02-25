@@ -3,10 +3,10 @@
 - This package is developed for `FlutterFlow`. And you may use in flutter.
 - This package contains not only widgets but also some actions that are related with UI design like snackbar.
 
-
 - [FlutterFlow Widgets](#flutterflow-widgets)
 - [LinkifyText](#linkifytext)
   - [How to use LinkifyText](#how-to-use-linkifytext)
+- [UrlPreview](#urlpreview)
 - [Custom Popup widget.](#custom-popup-widget)
   - [Custom Popup Tips](#custom-popup-tips)
   - [How to implement the custom ppup](#how-to-implement-the-custom-ppup)
@@ -19,6 +19,12 @@
 - [DisplayMedia widget](#displaymedia-widget)
 - [SafeArea widget](#safearea-widget)
 - [Snackbar](#snackbar)
+  - [success snackbar](#success-snackbar)
+  - [error snackbar](#error-snackbar)
+  - [Using go\_router context to let the snackbar work after page change](#using-go_router-context-to-let-the-snackbar-work-after-page-change)
+  - [Customizing the snackbar](#customizing-the-snackbar)
+- [CustomCalendar](#customcalendar)
+
 
 
 # LinkifyText
@@ -566,9 +572,15 @@ showSnackBar(
 You can display the number of events on the dates of the calendar.
 
 - Set a variable named `events` with the type of `List < JSON >` on AppState.
-- Add a `onTap` action into your custom widget.
-- When the user taps on a date, save the events into the app state and re-render the screen.
+- Create a custom widget. Let's call it `MyCalendar`.
+- Add a `onTap` action parameter to the `MyCalendar`.
+  - When the user taps on a day, the `MyCalendar` will save the event information on the `events` App State and will call the `onTap` action. So you need to add your own action and pass it over the `MyCalendar`.
+- When the user taps on a day, your action will run. You can get the events from `events` App State and display in on screen.
 - The documet must have `date` field.
+- There are two examples below.
+  - The first one does Firestore backend query with custom code. You can copy and use it without modification. Well of course, you can modify if you want.
+  - The second one does Firebase backend query with the native FF Firestore backend query. But you have to modify the custom code especially for the event data converting.
+
 
 
 
