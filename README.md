@@ -26,7 +26,7 @@
 - This is a simple and handy widget to use display linkified and launchable text. When a user taps, it will open the url in the text. This is a simple combination of `linkify` and `launcher` widgets.
 
 
-![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/url-preview-and-linkify-text.jpg?raw=true "CustomCalendar")
+![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/url-preview-and-linkify-text-2.jpg?raw=true "CustomCalendar")
 
 ## How to use LinkifyText
 
