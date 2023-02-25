@@ -458,8 +458,8 @@ You can name the action by yourself.
 **Define Arguments**
 | Parameter Name | Type | List | Nullable |
 |----------------|------|------|----------|
-| title          | String | No | No |
-| message | String | No | No |
+| title          | String | No | No       |
+| message        | String | No | No       |
 
 
 ```dart
