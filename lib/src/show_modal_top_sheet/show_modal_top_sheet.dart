@@ -4,8 +4,7 @@ import 'package:flutter/material.dart';
 ///
 /// showModalTopSheet is a custom action that shows a modal top sheet.
 /// It can be used to display a snackbar on top.
-Future<T?> showModalTopSheet<T>(BuildContext context, Widget child,
-    {bool barrierDismissible = true}) {
+Future<T?> showModalTopSheet<T>(BuildContext context, Widget child, {bool barrierDismissible = true}) {
   return showGeneralDialog<T?>(
     context: context,
     barrierDismissible: barrierDismissible,
@@ -15,9 +14,7 @@ Future<T?> showModalTopSheet<T>(BuildContext context, Widget child,
     pageBuilder: (context, _, __) => child,
     transitionBuilder: (context, animation, secondaryAnimation, child) {
       return SlideTransition(
-        position: CurvedAnimation(parent: animation, curve: Curves.easeOutCubic)
-            .drive(
-                Tween<Offset>(begin: const Offset(0, -1.0), end: Offset.zero)),
+        position: CurvedAnimation(parent: animation, curve: Curves.easeOutCubic).drive(Tween<Offset>(begin: const Offset(0, -1.0), end: Offset.zero)),
         child: Column(
           children: [
             Material(

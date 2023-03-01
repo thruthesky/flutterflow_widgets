@@ -13,6 +13,7 @@ dependencies:
 
   flutter_localizations:
     sdk: flutter
+
   # Add links to text
   flutter_linkify: ^5.0.2
 
