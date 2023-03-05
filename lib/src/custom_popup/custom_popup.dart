@@ -9,16 +9,19 @@ class CustomPopup extends StatelessWidget {
     required this.popup,
     this.dx = 0,
     this.dy = 16,
+    this.tooltip = '',
   }) : super(key: key);
 
   final Widget child;
   final Widget popup;
   final double dx;
   final double dy;
+  final String tooltip;
 
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton(
+      tooltip: tooltip,
       padding: const EdgeInsets.all(0),
       offset: Offset(dx, dy),
       elevation: 0,

@@ -33,6 +33,15 @@
     },
 
     {
+      "name": "Chrome",
+      "cwd": "example",
+      "program": "lib/main.dart",
+      "request": "launch",
+      "type": "dart",
+      "deviceId": "chrome"
+    },
+
+    {
       "name": "Calendar - Simulator - M1 Mac Book - 16",
       "cwd": "apps/testcalendar",
       "program": "lib/main.dart",

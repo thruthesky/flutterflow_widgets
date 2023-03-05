@@ -1,3 +1,7 @@
+## 0.0.39
+
+* Update. Custom popup tooltip. Document updates.
+
 ## 0.0.38
 
 * Update. document.
