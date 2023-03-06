@@ -101,6 +101,60 @@ UrlPreview(
 - For more details, see the example at example/lib/url_preview.screen.dart
 
 
+- Here is another example for FlutterFlow. Just copy & paste the code below.
+
+```dart
+
+import 'package:flutterflow_widgets/flutterflow_widgets.dart';
+
+class SitePreview extends StatefulWidget {
+  const SitePreview({
+    Key? key,
+    this.width,
+    this.height,
+    this.text,
+    this.padding,
+    this.descriptionLength,
+    required this.myMessage,
+  }) : super(key: key);
+
+  final double? width;
+  final double? height;
+  final String? text;
+  final double? padding;
+  final int? descriptionLength;
+  final bool myMessage;
+
+  @override
+  createState() => SitePreviewState();
+}
+
+class SitePreviewState extends State<SitePreview> {
+  @override
+  Widget build(BuildContext context) {
+    return UrlPreview(
+      text: widget.text,
+      descriptionLength: widget.descriptionLength,
+      builder: (Widget child) => Container(
+        margin: const EdgeInsets.only(top: 8),
+        padding: const EdgeInsets.all(16),
+        width: 260,
+        decoration: BoxDecoration(
+            color: Colors.amber.shade50.withAlpha(100),
+            border: Border.all(color: Colors.black26.withAlpha(25)),
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(widget.myMessage == false ? 0 : 16),
+              topRight: Radius.circular(widget.myMessage ? 0 : 16),
+              bottomLeft: Radius.circular(16),
+              bottomRight: Radius.circular(16),
+            )),
+        child: child,
+      ),
+    );
+  }
+}
+```
+
 
 
 
