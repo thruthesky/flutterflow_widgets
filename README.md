@@ -839,3 +839,21 @@ class _MyCalendarState extends State<MyCalendar> {
   }
 }
 ```
+
+
+
+
+# IconLabelColumn
+
+- It's a simple widget of a combination of icon and label in column. That's it.
+
+Example of UI
+![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/icon-label-column.jpg?raw=true "Icon label column")
+
+
+```dart
+IconLabelColumn(
+  icon: Icons.favorite,
+  label: 'Favorite',
+)
+```
