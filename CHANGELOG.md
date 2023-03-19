@@ -1,3 +1,8 @@
+## 0.0.41
+
+* Add. IconLabelColumn
+
+
 ## 0.0.40
 
 * Update. Doc.
