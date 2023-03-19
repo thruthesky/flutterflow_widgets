@@ -839,3 +839,18 @@ class _MyCalendarState extends State<MyCalendar> {
   }
 }
 ```
+
+
+
+
+# IconLabelColumn
+
+- It's a simple widget of a combination of icon and label in column. That's it.
+
+
+```dart
+IconLabelColumn(
+  icon: Icons.favorite,
+  label: 'Favorite',
+)
+```
