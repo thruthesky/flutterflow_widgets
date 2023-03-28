@@ -10,3 +10,4 @@ export 'src/url_preview/url_preview.dart';
 export 'src/url_preview/url_preview.model.dart';
 export 'src/custom_calendar/custom_calendar.dart';
 export 'src/icon_label_column/icon_label_column.dart';
+export 'src/text/text_with_label.dart';

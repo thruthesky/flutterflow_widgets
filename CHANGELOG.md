@@ -1,3 +1,8 @@
+## 0.0.42
+
+* Add. TextWithLabel
+
+
 ## 0.0.41
 
 * Add. IconLabelColumn

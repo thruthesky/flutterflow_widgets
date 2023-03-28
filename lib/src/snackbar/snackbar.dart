@@ -50,64 +50,64 @@ SnackBar snackBarContent({
   Color arrowBackgroundColor = Colors.white,
   int? seconds,
 }) {
-  Widget content = SizedBox(
-    height: 100,
-    child: Stack(
-      clipBehavior: Clip.none,
-      children: [
-        Container(
-          margin: const EdgeInsets.only(top: 20),
-          decoration: BoxDecoration(
-            color: backgroundColor,
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
-            const SizedBox(
-              width: 16,
-            ),
-            Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    title,
-                    style: const TextStyle(color: Colors.white, fontSize: 14),
-                  ),
-                  const SizedBox(
-                    height: 2,
-                  ),
-                  Text(
-                    message,
-                    style: const TextStyle(color: Colors.white, fontSize: 13),
-                  ),
-                ],
-              ),
-            ),
-            IconButton(
-              onPressed: () {
-                ScaffoldMessenger.of(context).hideCurrentSnackBar();
-              },
-              icon: Icon(
-                Icons.close,
-                color: closeButtonColor,
-              ),
-            ),
-          ]),
+  Widget content = Stack(
+    clipBehavior: Clip.none,
+    children: [
+      Container(
+        margin: const EdgeInsets.only(top: 20),
+        decoration: BoxDecoration(
+          color: backgroundColor,
+          borderRadius: BorderRadius.circular(10),
         ),
-        Positioned(
-          left: 16,
-          top: -8,
-          child: CustomPaint(
-            painter: CustomStyleArrow(color: arrowBackgroundColor),
-            child: Container(
-              padding: const EdgeInsets.all(4),
-              child: icon,
+        child: Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
+          const SizedBox(
+            width: 16,
+          ),
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 24),
+                Text(
+                  title,
+                  style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  message,
+                  style: const TextStyle(color: Colors.white, fontSize: 13),
+                ),
+                const SizedBox(height: 16),
+              ],
             ),
           ),
+          IconButton(
+            onPressed: () {
+              ScaffoldMessenger.of(context).hideCurrentSnackBar();
+            },
+            icon: Icon(
+              Icons.close,
+              color: closeButtonColor,
+            ),
+          ),
+        ]),
+      ),
+      Positioned(
+        left: 16,
+        top: -8,
+        child: CustomPaint(
+          painter: CustomStyleArrow(color: arrowBackgroundColor),
+          child: Container(
+            padding: const EdgeInsets.all(4),
+            child: icon,
+          ),
         ),
-      ],
-    ),
+      ),
+    ],
   );
 
   return SnackBar(
