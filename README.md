@@ -180,6 +180,8 @@ It would be good to use when there are multiple popup menus in one screen. Like 
 
 - When you want to display dynamic content in the popup box, you would set the width and height bound on the popup box. Or you would see an error of `NEEDS-LAYOUT NEEDS-PAINT`.
 
+- To change the state of popup, you need to make it with a stream.
+
 ## How to implement the custom ppup
 
 - For your information, When you create a Component, you can use that Component in a Custom widget. You need to check `Exclude from Compile` in this case.
