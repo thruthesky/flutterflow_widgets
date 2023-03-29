@@ -57,4 +57,3 @@ migrate_working_dir/
 .dart_tool/
 .packages
 build/
-example
