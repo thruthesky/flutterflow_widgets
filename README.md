@@ -25,7 +25,9 @@
   - [Customizing the snackbar](#customizing-the-snackbar)
 - [CustomCalendar](#customcalendar)
 
+# TextWithLabel
 
+- explain...
 
 # LinkifyText
 
@@ -177,6 +179,8 @@ It would be good to use when there are multiple popup menus in one screen. Like 
 ## Custom Popup Tips
 
 - When you want to display dynamic content in the popup box, you would set the width and height bound on the popup box. Or you would see an error of `NEEDS-LAYOUT NEEDS-PAINT`.
+
+- To change the state of popup, you need to make it with a stream.
 
 ## How to implement the custom ppup
 
@@ -845,7 +849,7 @@ class _MyCalendarState extends State<MyCalendar> {
 
 # IconLabelColumn
 
-- It's a simple widget of a combination of icon and label in column. That's it.
+- It's a simple widget of a combination of icon and label in column. It shows icon on top and label at bottom. That's it.
 
 Example of UI
 ![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/icon-label-column.jpg?raw=true "Icon label column")
