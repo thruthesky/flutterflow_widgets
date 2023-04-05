@@ -1,4 +1,30 @@
+doc/
+etc/
+key.dart
+
+
+
+example/.dart_tool
+example/.idea
+example/android
+example/build
+example/ios
+example/linux
+example/macos
+example/web
+example/windows
+example/test
+example/README.md
+example/analysis_options.yaml
+example/pubspec.lock
+
+analysis_options.yaml
+
+./test/
+res/
 apps/
+firebase/
+firebase_options.dart
 
 
 # Miscellaneous

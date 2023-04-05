@@ -5,13 +5,24 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Simulator",
+      "name": "Simulator - M1 Mac Book - 16",
       "cwd": "example",
       "program": "lib/main.dart",
       "request": "launch",
       "type": "dart",
-      "deviceId": "ECE40623-ACC2-4729-8DD4-B3DBB46D4B25"
+      "flutterMode": "debug",
+      "deviceId": "8E7C4276-1F64-453C-AE32-422C59170B93"
     },
+    {
+      "name": "iPhone11MaxPro - iPhone - JaeHo",
+      "cwd": "example",
+      "program": "lib/main.dart",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "debug",
+      "deviceId": "00008030-000904C80290802E"
+    },
+
     {
       "name": "Emulator - 5554",
       "cwd": "example",
@@ -19,6 +30,25 @@
       "request": "launch",
       "type": "dart",
       "deviceId": "emulator-5554"
+    },
+
+    {
+      "name": "Chrome",
+      "cwd": "example",
+      "program": "lib/main.dart",
+      "request": "launch",
+      "type": "dart",
+      "deviceId": "chrome"
+    },
+
+    {
+      "name": "Calendar - Simulator - M1 Mac Book - 16",
+      "cwd": "apps/testcalendar",
+      "program": "lib/main.dart",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "debug",
+      "deviceId": "8E7C4276-1F64-453C-AE32-422C59170B93"
     }
   ]
 }
