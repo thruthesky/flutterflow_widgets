@@ -1,3 +1,8 @@
+## 0.0.45
+
+* Update. Add more tutorial text on CustomCalendar.
+
+
 ## 0.0.43
 
 * Bump.

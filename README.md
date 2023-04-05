@@ -673,7 +673,7 @@ showSnackBar(
 # CustomCalendar
 
 
-You can display the number of events on the dates of the calendar.
+You can display the number of events on the dates of the calendar. See the [Example FlutterFlow Project](https://app.flutterflow.io/project/flutter-flow-widgets-calendar-plzgls).
 
 
 - The documet must have `date` field.
