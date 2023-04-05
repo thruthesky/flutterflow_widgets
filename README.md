@@ -4,6 +4,9 @@
 
 - This package gives you enhanced and more handy widgets like `LinkifyLauncher` which is a combination of `linkify` and `launcher` widgets.
 
+## TODO
+
+- Change the widget name from `LinkTest` to `LinkifyText`.
 
 ## How to apply
 
