@@ -4,7 +4,9 @@
 - This package contains not only widgets but also some actions that are related with UI design like snackbar.
 
 - [FlutterFlow Widgets](#flutterflow-widgets)
+- [TextWithLabel](#textwithlabel)
 - [LinkifyText](#linkifytext)
+  - [TODO](#todo)
   - [How to use LinkifyText](#how-to-use-linkifytext)
 - [UrlPreview](#urlpreview)
 - [Custom Popup widget.](#custom-popup-widget)
@@ -24,6 +26,8 @@
   - [Using go\_router context to let the snackbar work after page change](#using-go_router-context-to-let-the-snackbar-work-after-page-change)
   - [Customizing the snackbar](#customizing-the-snackbar)
 - [CustomCalendar](#customcalendar)
+- [IconLabelColumn](#iconlabelcolumn)
+
 
 # TextWithLabel
 
@@ -33,6 +37,9 @@
 
 - This is a simple and handy widget to use display linkified and launchable text. When a user taps, it will open the url in the text. This is a simple combination of `linkify` and `launcher` widgets.
 
+## TODO
+
+- Change the widget name from `LinkTest` to `LinkifyText`.
 
 ![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/url-preview-and-linkify-text-2.jpg?raw=true "LinkifyText and UrlPreview")
 
@@ -666,14 +673,35 @@ showSnackBar(
 # CustomCalendar
 
 
-You can display the number of events on the dates of the calendar.
+You can display the number of events on the dates of the calendar. See the [Example FlutterFlow Project](https://app.flutterflow.io/project/flutter-flow-widgets-calendar-plzgls).
+
+
+- The documet must have `date` field.
+![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/calendar-schema.jpg?raw=true "CustomCalendar")
+![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/calendar-document.jpg?raw=true "CustomCalendar")
+
+
 
 - Set a variable named `events` with the type of `List < JSON >` on AppState.
-- Create a custom widget. Let's call it `MyCalendar`.
+![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/calendar-appstate.jpg?raw=true "CustomCalendar")
+
+- Create a custom widget. Let's name it `MyCalendar`. See the images below.
+
+
 - Add a `onTap` action parameter to the `MyCalendar`.
   - When the user taps on a day, the `MyCalendar` will save the event information on the `events` App State and will call the `onTap` action. So you need to add your own action and pass it over the `MyCalendar`.
+
+
+
 - When the user taps on a day, your action will run. You can get the events from `events` App State and display in on screen.
-- The documet must have `date` field.
+![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/calendar-appstate.jpg?raw=true "CustomCalendar")
+![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/calendar-action.jpg?raw=true "CustomCalendar")
+
+
+- Display the `events` from AppState into a ListView
+![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/calendar-display.jpg?raw=true "CustomCalendar")
+![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/calendar-title.jpg?raw=true "CustomCalendar")
+
 - There are two examples below.
   - The first one does Firestore backend query with custom code. You can copy and use it without modification. Well of course, you can modify if you want.
   - The second one does Firebase backend query with the native FF Firestore backend query. But you have to modify the custom code especially for the event data converting.
@@ -843,6 +871,9 @@ class _MyCalendarState extends State<MyCalendar> {
   }
 }
 ```
+
+
+
 
 
 
