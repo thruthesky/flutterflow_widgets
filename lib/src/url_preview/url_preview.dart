@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutterflow_widgets/flutterflow_widgets.dart';
+import 'package:acx70_widgets/flutterflow_widgets.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 /// [UrlPreview] is a widget that shows a preview of a URL.

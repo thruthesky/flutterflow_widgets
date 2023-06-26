@@ -1,5 +1,7 @@
 # FlutterFlow Widgets
 
+**This package has been forked from [flutterflow_widgets](https://github.com/thruthesky/flutterflow_widgets)**
+
 - This package is developed for `FlutterFlow`. And you may use in flutter.
 - This package contains not only widgets but also some actions that are related with UI design like snackbar.
 
@@ -41,7 +43,7 @@
 
 - Change the widget name from `LinkTest` to `LinkifyText`.
 
-![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/url-preview-and-linkify-text-2.jpg?raw=true "LinkifyText and UrlPreview")
+![Image Link](https://github.com/acx70/flutterflow_widgets/blob/main/res/img/url-preview-and-linkify-text-2.jpg?raw=true "LinkifyText and UrlPreview")
 
 ## How to use LinkifyText
 
@@ -83,7 +85,7 @@ class _LinkifyState extends State<Linkify> {
 
 
 
-![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/ffw-link-preview.jpg?raw=true "CustomCalendar")
+![Image Link](https://github.com/acx70/flutterflow_widgets/blob/main/res/img/ffw-link-preview.jpg?raw=true "CustomCalendar")
 
 
 - When there is an URL in a text, then it will show a preview.
@@ -178,7 +180,7 @@ So, I made a widget named `CustomPopup` that does something like the popup menu 
 In the screenshot, I display the members of the chat room. Yes, it is a real popup menu and all the designs are coming from Components. You can add custom design and actions as you want.
 
 
-![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/custom-popup.gif?raw=true "Custom Popup")
+![Image Link](https://github.com/acx70/flutterflow_widgets/blob/main/res/img/custom-popup.gif?raw=true "Custom Popup")
 
 
 It would be good to use when there are multiple popup menus in one screen. Like one in left side of appbar, and another in right side of app bar, and one more on user profile photo of each posts and comments.
@@ -549,7 +551,7 @@ Be sure that you disable the `Enforce Width and Height` option.
 
 # Snackbar
 
-![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/snackbar.gif?raw=true "Snackbar")
+![Image Link](https://github.com/acx70/flutterflow_widgets/blob/main/res/img/snackbar.gif?raw=true "Snackbar")
 
 
 The `snackbar` is an action that it does appear on the screen by an action. You can show a snackbar on `On Page Load` event, or when a user presses a button.
@@ -677,13 +679,13 @@ You can display the number of events on the dates of the calendar. See the [Exam
 
 
 - The documet must have `date` field.
-![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/calendar-schema.jpg?raw=true "CustomCalendar")
-![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/calendar-document.jpg?raw=true "CustomCalendar")
+![Image Link](https://github.com/acx70/flutterflow_widgets/blob/main/res/img/calendar-schema.jpg?raw=true "CustomCalendar")
+![Image Link](https://github.com/acx70/flutterflow_widgets/blob/main/res/img/calendar-document.jpg?raw=true "CustomCalendar")
 
 
 
 - Set a variable named `events` with the type of `List < JSON >` on AppState.
-![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/calendar-appstate.jpg?raw=true "CustomCalendar")
+![Image Link](https://github.com/acx70/flutterflow_widgets/blob/main/res/img/calendar-appstate.jpg?raw=true "CustomCalendar")
 
 - Create a custom widget. Let's name it `MyCalendar`. See the images below.
 
@@ -694,13 +696,13 @@ You can display the number of events on the dates of the calendar. See the [Exam
 
 
 - When the user taps on a day, your action will run. You can get the events from `events` App State and display in on screen.
-![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/calendar-appstate.jpg?raw=true "CustomCalendar")
-![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/calendar-action.jpg?raw=true "CustomCalendar")
+![Image Link](https://github.com/acx70/flutterflow_widgets/blob/main/res/img/calendar-appstate.jpg?raw=true "CustomCalendar")
+![Image Link](https://github.com/acx70/flutterflow_widgets/blob/main/res/img/calendar-action.jpg?raw=true "CustomCalendar")
 
 
 - Display the `events` from AppState into a ListView
-![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/calendar-display.jpg?raw=true "CustomCalendar")
-![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/calendar-title.jpg?raw=true "CustomCalendar")
+![Image Link](https://github.com/acx70/flutterflow_widgets/blob/main/res/img/calendar-display.jpg?raw=true "CustomCalendar")
+![Image Link](https://github.com/acx70/flutterflow_widgets/blob/main/res/img/calendar-title.jpg?raw=true "CustomCalendar")
 
 - There are two examples below.
   - The first one does Firestore backend query with custom code. You can copy and use it without modification. Well of course, you can modify if you want.
@@ -709,8 +711,8 @@ You can display the number of events on the dates of the calendar. See the [Exam
 
 
 
-![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/ffw-calendar-2.jpg?raw=true "CustomCalendar")
-![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/ffw-calendar-3.jpg?raw=true "CustomCalendar")
+![Image Link](https://github.com/acx70/flutterflow_widgets/blob/main/res/img/ffw-calendar-2.jpg?raw=true "CustomCalendar")
+![Image Link](https://github.com/acx70/flutterflow_widgets/blob/main/res/img/ffw-calendar-3.jpg?raw=true "CustomCalendar")
 
 
 
@@ -781,7 +783,7 @@ class _MyCalendarState extends State<MyCalendar> {
 
 Instead of passing the collection name into the method and do the firebase things inside, you can do the Firestore backend query and pass the list of the document you have.
 
-![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/ffw-calendar-5.jpg?raw=true "CustomCalendar")
+![Image Link](https://github.com/acx70/flutterflow_widgets/blob/main/res/img/ffw-calendar-5.jpg?raw=true "CustomCalendar")
 
 ```dart
 import 'package:flutterflow_widgets/flutterflow_widgets.dart';
@@ -883,7 +885,7 @@ class _MyCalendarState extends State<MyCalendar> {
 - It's a simple widget of a combination of icon and label in column. It shows icon on top and label at bottom. That's it.
 
 Example of UI
-![Image Link](https://github.com/thruthesky/flutterflow_widgets/blob/main/res/img/icon-label-column.jpg?raw=true "Icon label column")
+![Image Link](https://github.com/acx70/flutterflow_widgets/blob/main/res/img/icon-label-column.jpg?raw=true "Icon label column")
 
 
 ```dart

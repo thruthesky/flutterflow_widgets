@@ -1,10 +1,10 @@
-name: flutterflow_widgets
+name: acx70_widgets
 description: Easy to use custom widget & action library for the FlutterFlow deveopers.
 version: 0.0.49
-homepage: https://github.com/thruthesky/flutterflow_widgets
+homepage: https://github.com/acx70/flutterflow_widgets
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.19.2 <3.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
@@ -15,26 +15,26 @@ dependencies:
     sdk: flutter
 
   # Add links to text
-  flutter_linkify: ^5.0.2
+  flutter_linkify: ^6.0.0
 
   # Get links from text
-  linkify: ^4.1.0
+  linkify: ^5.0.0
 
   # Open links
   url_launcher: ^6.1.5
 
-  cached_network_image: 3.2.1
+  cached_network_image: ^3.2.3
 
   mime_type: 1.0.0
-  chewie: 1.3.4
+  chewie: ^1.5.0
 
-  video_player: 2.6.0
-  video_player_android: 2.4.3
-  video_player_avfoundation: 2.4.2
-  video_player_platform_interface: 6.1.0
-  video_player_web: 2.0.15
+  video_player: ^2.6.1
+  video_player_android: ^2.4.9
+  video_player_avfoundation: ^2.4.6
+  video_player_platform_interface: ^6.1.0
+  video_player_web: ^2.0.16
 
-  path: 1.8.2
+  path: ^1.8.3
 
   # url preview
   http: ^0.13.5
@@ -47,12 +47,12 @@ dependencies:
   shared_preferences: ^2.0.15
 
   # for CustomCalendar with the same version of FF
-  table_calendar: 3.0.6
-  intl: 0.17.0
+  table_calendar: ^3.0.8
+  intl: ^0.18.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^2.0.1
 
 flutter:
