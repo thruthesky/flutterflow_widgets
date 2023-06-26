@@ -1,6 +1,6 @@
 name: acx70_widgets
 description: Easy to use custom widget & action library for the FlutterFlow deveopers.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/acx70/flutterflow_widgets
 
 environment:
@@ -25,7 +25,7 @@ dependencies:
 
   cached_network_image: ^3.2.3
 
-  mime_type: 1.0.0
+  mime_type: ^1.0.0
   chewie: ^1.5.0
 
   video_player: ^2.6.1
@@ -48,7 +48,7 @@ dependencies:
 
   # for CustomCalendar with the same version of FF
   table_calendar: ^3.0.8
-  intl: ^0.18.1
+  intl: ^0.18.0
 
 dev_dependencies:
   flutter_test:
