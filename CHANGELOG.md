@@ -1,13 +1,15 @@
-<<<<<<< HEAD
-## 0.0.44
+## 0.0.50
 
-* Bump.
-=======
+* Dependency version updates
+
+
 ## 0.0.45
 
 * Update. Add more tutorial text on CustomCalendar.
->>>>>>> 760336d5cba7ffea65d88ff4ea0fa9db8faff50e
 
+## 0.0.44
+
+* Bump.
 
 ## 0.0.43
 
