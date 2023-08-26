@@ -1,6 +1,6 @@
 name: flutterflow_widgets
 description: Easy to use custom widget & action library for the FlutterFlow deveopers.
-version: 0.0.50
+version: 0.0.52
 homepage: https://github.com/thruthesky/flutterflow_widgets
 
 environment:
@@ -21,18 +21,18 @@ dependencies:
   linkify: ^5.0.0
 
   # Open links
-  url_launcher: ^6.1.5
+  url_launcher: 6.1.10
 
-  cached_network_image: ^3.2.3
+  cached_network_image: 3.2.1
 
-  mime_type: ^1.0.0
+  mime_type: 1.0.0
   chewie: ^1.5.0
 
-  video_player: ^2.6.1
-  video_player_android: ^2.4.9
-  video_player_avfoundation: ^2.4.6
-  video_player_platform_interface: ^6.1.0
-  video_player_web: ^2.0.16
+  video_player: 2.6.0
+  video_player_android: 2.4.3
+  video_player_avfoundation: 2.4.2
+  video_player_platform_interface: 6.1.0
+  video_player_web: 2.0.15
 
   path: ^1.8.3
 
@@ -44,7 +44,7 @@ dependencies:
   crypto: ^3.0.2
 
   # local storage for url preview
-  shared_preferences: ^2.0.15
+  shared_preferences: 2.0.15
 
   # for CustomCalendar with the same version of FF
   table_calendar: ^3.0.8
