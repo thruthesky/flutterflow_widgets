@@ -1,3 +1,8 @@
+## 0.0.53
+
+* Dependency version updates
+
+
 ## 0.0.52
 
 * Dependency version updates
